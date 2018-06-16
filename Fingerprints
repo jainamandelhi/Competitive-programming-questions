@@ -1,0 +1,20 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    int n,m;
+    int arr1[10] = {0};
+    int arr2[10];
+    cin >> n >> m;
+    for(int i = 0;i < n; ++i){
+        cin >> arr2[i];
+    }
+    for(int i = 0,a;i < m; ++i){
+        cin >> a;
+        arr1[a]++;
+    }
+    for(int i = 0; i < n; ++i){
+        if(arr1[arr2[i]])cout << arr2[i] << " ";
+    }
+
+    return 0;
+}
