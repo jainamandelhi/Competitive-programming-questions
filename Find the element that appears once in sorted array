@@ -1,0 +1,34 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main() {
+    int t,n;
+    cin>>t;
+    for(int i=0;i<t;i++)
+    {
+        cin>>n;
+        vector<int>arr(n);
+        for(int j=0;j<n;j++)
+        cin>>arr[j];
+        if(arr[n-2]<arr[n-1])
+        {
+            cout<<arr[n-1]<<endl;
+            continue;
+        }
+        for(int j=0;j<n-2;)
+        {
+            if(arr[j]==arr[j+1])
+            {
+                j+=2;
+            }
+            else
+            {
+                cout<<arr[j]<<endl;
+                break;
+            }
+        }
+    }   
+	//code
+	return 0;
+}
