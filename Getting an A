@@ -20,6 +20,6 @@ int main()
         avg=(avg*n-arr[i]+5)/n;
         i++;
     }
-    cout<<i;
+    cout<<i; 
     return 0;
 }
