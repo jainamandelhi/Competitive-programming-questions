@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+#include<string>
+using namespace std;
+int main()
+{
+   long long n,m,d;
+   cin>>n>>m>>d;
+   long long arr[n*m];
+   for(long long i=0;i<n*m;i++)
+        cin>>arr[i];
+   sort(arr,arr+n*m);
+   long long mid=arr[n*m/2];
+   long long total=0;
+   for(long long i=0;i<n*m;i++)
+   {
+       if(abs(mid-arr[i])%d!=0)
+       {
+           cout<<-1;
+           return 0;
+       }
+       total+=abs(mid-arr[i])/d;
+   }
+   cout<<total;
+}
