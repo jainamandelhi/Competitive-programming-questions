@@ -21,3 +21,4 @@ int main()
     //cout<<ans<<endl;
     cout<<arr[int(ans)-1];
 }
+ 
