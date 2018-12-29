@@ -1,16 +1,24 @@
 #include<bits/stdc++.h>
 #define pb push_back
+#define ll long long
 #define mp make_pair
 using namespace std;
 int main()
 {
-    int n;
-    cin>>n;
-    int arr[n];
-    for(int i=0;i<n;i++)
-        cin>>arr[i];
-    sort(arr,arr+n);
-    cout<<min(arr[n-2]-arr[0],arr[n-1]-arr[1]);
+    ll t;
+    cin>>t;
+    while(t--)
+    {
+        ll n;
+        cin>>n;
+        for(int i=3;;i++)
+        {
+            if((n*i)%180==0 && ((i-2)*180)/i>=n)
+            {
+                cout<<i<<endl;
+                break;
+            }
+        }
+    }
     return 0;
 }
- 
